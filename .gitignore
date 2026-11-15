@@ -48,6 +48,15 @@ hf_cache/
 
 # ---------- Local Databases, Runtime Data & Storage ----------
 # Note: Do NOT ignore data/ as data/corpus/ contains critical k8s runbooks.
+**/data/qdrant/
+**/data/uploads/
+**/data/*.db
+**/data/*.db-wal
+**/data/*.db-shm
+**/data/*.db-journal
+**/data/*.sqlite3
+**/data/*.sqlite3-wal
+**/data/*.sqlite3-shm
 data/qdrant/
 data/uploads/
 data/*.db
@@ -57,10 +66,15 @@ data/*.db-journal
 data/*.sqlite3
 data/*.sqlite3-wal
 data/*.sqlite3-shm
+*.db
 *.db-wal
 *.db-shm
 *.sqlite3-wal
 *.sqlite3-shm
+
+# ---------- Scratch & Diagnostics ----------
+scratch/
+**/scratch/
 
 # ---------- Logs & Telemetry / Evaluation Runs ----------
 *.log
